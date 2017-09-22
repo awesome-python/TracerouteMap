@@ -15,7 +15,7 @@ A simple Python script that shows a visual traceroute using Google Earth.
 
 ### How To Use
 1. Using the command line (or a batch script), run:
-    python run.py <ip-address>
+    `python run.py <ip-address>`
 2. Wait for the program to finish to traceroute.
 3. It will open Google Earth when it is completed.
 

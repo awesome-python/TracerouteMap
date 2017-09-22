@@ -24,13 +24,15 @@ def parseResult(info):
 	addresses = []
 	for line in lines:
 		try:
-			if(line[2].isdigit()):
-				char1 = '['
-				char2 = ']'
-				address = (line[line.find(char1)+1 : line.find(char2)])
-				if(not address):
-					print()
+			if(line[2].isdigit() and "Request" not in line):
+				if("[" in line):
+					char1 = '['
+					char2 = ']'
+					address = (line[line.find(char1)+1 : line.find(char2)])
+					addresses.append(address)
 				else:
+					addressTMP = line.split()
+					address = addressTMP[len(addressTMP)-1]
 					addresses.append(address)
 		except IndexError:
 			print()

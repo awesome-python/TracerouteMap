@@ -67,10 +67,10 @@ def createKML(names,lons,lats):
 		pnt = kml.newpoint(name=names[i], coords=[(lons[i],lats[i])])
 		pnt.style.iconstyle.scale = 3
 		pnt.style.iconstyle.icon.href = 'https://cdn2.iconfinder.com/data/icons/social-media-8/512/pointer.png'
-		flyto = playlist.newgxflyto(gxduration=6)
+		flyto = playlist.newgxflyto(gxduration=15)
 		flyto.camera.longitude = lons[i]
 		flyto.camera.latitude = lats[i]
-		wait = playlist.newgxwait(gxduration=3)
+		wait = playlist.newgxwait(gxduration=7)
 	for i2 in range(0,len(lons)):
 		try:
 			name = names[i2] + " to " + names[i2+1]
